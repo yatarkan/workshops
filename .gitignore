@@ -1,0 +1,25 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+.ipynb_checkpoints/
+
+# Environments
+.env
+.venv
+.idea
+venv
+
+notebook/data/*
+!notebook/data/input.mp4
+!notebook/data/input_image.jpg
+
+# Mac
+.DS_Store
