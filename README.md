@@ -2,7 +2,7 @@
 
 ## Workshops:
 
-1. [CV] OpenVINO™ Deep Learning Workbench: Optimizing and Analysing Pre-Trained Neural Networks
+1. [[CV] OpenVINO™ Deep Learning Workbench: Optimizing and Analysing Pre-Trained Neural Networks](./workshops/2022_opentalksai_cv)
 
 ## How to run the notebook
 
