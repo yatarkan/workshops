@@ -1,14 +1,15 @@
 # First time opening the remote machine
-# sudo apt-get --yes update
-# apt install --yes git
-# git clone https://github.com/dl-wb-experiments/face-hiding-workshop
-# bash face-hiding-workshop/automation/bootstrap.sh 
+# apt -y update
+# apt install -y git
+# git clone https://github.com/dl-wb-experiments/workshops
+# bash workshops/automation/bootstrap.sh 
 # To benchmark:
 # source venv/bin/activate
 # pip install openvino-dev
 # pip install opencv-python-headless
 # apt install --yes libpython3.7
 # benchmark_app -m .workbench/models/1/original/ssd_mobilenet_v2_coco.xml -i .workbench/datasets/3/0.jpg -b 1 -nstreams 1 -d CPU
+
 sudo apt-get --yes update
 sudo update-pciids
 sudo apt-get --yes upgrade
@@ -40,9 +41,9 @@ sudo usermod -aG docker ${USER}
 
 mkdir -p -m 777 ~/.workbench
 apt install -y git
-git clone https://github.com/dl-wb-experiments/face-hiding-workshop ~/.workbench/workshop
+git clone https://github.com/dl-wb-experiments/workshops ~/.workbench/workshop
 chmod -R 777 ~/.workbench/workshop/
 
 source venv/bin/activate
 python -m pip install openvino-workbench
-openvino-workbench --image openvino/workbench:2021.4.2 --assets-directory ~/.workbench --detached
+openvino-workbench --image openvino/workbench_private:1.0.4036.bfc0c16b --assets-directory ~/.workbench --detached
