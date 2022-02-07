@@ -7,7 +7,7 @@
 # source venv/bin/activate
 # pip install openvino-dev
 # pip install opencv-python-headless
-# apt install --yes libpython3.7
+# apt install --yes libpython3.9
 # benchmark_app -m .workbench/models/1/original/ssd_mobilenet_v2_coco.xml -i .workbench/datasets/3/0.jpg -b 1 -nstreams 1 -d CPU
 
 sudo apt-get --yes update
@@ -15,10 +15,10 @@ sudo update-pciids
 sudo apt-get --yes upgrade
 sudo apt-get --yes install software-properties-common
 sudo add-apt-repository --yes ppa:deadsnakes/ppa
-sudo apt-get --yes install python3.7 htop
+sudo apt-get --yes install python3.9 htop
 sudo apt-get --yes install python3-pip
-python3.7 -m pip install virtualenv
-python3.7 -m virtualenv venv
+python3.9 -m pip install virtualenv
+python3.9 -m virtualenv venv
 
 
 sudo apt-get --yes install \
