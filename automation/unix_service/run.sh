@@ -12,4 +12,4 @@ git clone https://github.com/dl-wb-experiments/workshops.git ${FULL_WORKSHOP_PAT
 chmod -R 777 ${FULL_WORKSHOP_PATH}
 
 source ${USER_HOME_DIR}/venv/bin/activate
-openvino-workbench --image openvino/workbench:2021.4.1.1 --assets-directory ${USER_HOME_DIR}/.workbench
+openvino-workbench --image openvino/workbench:latest_release_2022.1 --assets-directory ${USER_HOME_DIR}/.workbench
