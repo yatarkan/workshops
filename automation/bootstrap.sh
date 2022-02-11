@@ -40,7 +40,7 @@ sudo usermod -aG docker ${USER}
 #newgrp docker
 
 mkdir -p -m 777 ~/.workbench
-apt install -y git
+sudo apt install -y git
 git clone https://github.com/dl-wb-experiments/workshops ~/.workbench/workshop
 chmod -R 777 ~/.workbench/workshop/
 
