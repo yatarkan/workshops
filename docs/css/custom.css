@@ -1,0 +1,7 @@
+#userNumberInput {
+  width: 300px;
+}
+
+#openButton[aria-disabled='true'] {
+  pointer-events: none;
+}
