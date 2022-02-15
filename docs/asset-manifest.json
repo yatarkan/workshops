@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/workshops/static/css/main.5fe81b7f.css",
+    "main.js": "/workshops/static/js/main.297a4fd3.js",
+    "index.html": "/workshops/index.html",
+    "main.5fe81b7f.css.map": "/workshops/static/css/main.5fe81b7f.css.map",
+    "main.297a4fd3.js.map": "/workshops/static/js/main.297a4fd3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5fe81b7f.css",
+    "static/js/main.297a4fd3.js"
+  ]
+}
