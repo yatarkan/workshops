@@ -6,7 +6,7 @@ torch==1.10.1
 onnx==1.10.2
 
 ipywidgets==7.6.5
-git+https://github.com/twintproject/twint.git@origin/master#egg=twint
+twint-2.1.21-py3-none-any.whl
 
 transformers==4.12.2
 sentencepiece==0.1.96
