@@ -21,10 +21,22 @@ function App() {
   }
 
   const handleRegisterUser = async (user) => {
-
     const localStorageKey = localStorageKeys[selectedWorkshop];
     localStorage.setItem(localStorageKey, JSON.stringify(user));
     setWorkshopUser(user);
+  }
+
+  const resetState = () => {
+    setSelectedWorkshop(null);
+    setIsCustomUserNumber(false);
+    setWorkshopUser(null);
+  }
+
+  const handleLogoutUser = () => {
+    setWorkshopUser(null);
+    setIsCustomUserNumber(false);
+    const localStorageKey = localStorageKeys[selectedWorkshop];
+    localStorage.removeItem(localStorageKey);
   }
 
   return (
@@ -36,13 +48,25 @@ function App() {
       </div>
       <h1 className="h1 mb-2 mt-2">OpenTalks.AI Workshop</h1>
       {selectedWorkshop
-        ? <h2 className="h2 mb-4">{workshopTitles[selectedWorkshop]}</h2>
+        ? <div>
+          <h2 className="h2">{workshopTitles[selectedWorkshop]}</h2>
+          <button className="d-block btn-link mb-4" type="button" onClick={resetState}>Back to workshop selection
+          </button>
+        </div>
         : <WorkshopSelect selectWorkshop={handleSelectWorkshop}/>}
       {selectedWorkshop && !isCustomUserNumber &&
-        <WorkshopUser workshopUser={workshopUser} registerUser={handleRegisterUser}
-                      useCustomUserNumber={() => setIsCustomUserNumber(true)}/>}
+        <WorkshopUser
+          workshopType={selectedWorkshop}
+          workshopUser={workshopUser}
+          registerUser={handleRegisterUser}
+          useCustomUserNumber={() => setIsCustomUserNumber(true)}
+          logoutUser={handleLogoutUser}
+        />}
       {selectedWorkshop && (workshopUser || isCustomUserNumber) &&
-        <WorkshopOpenForm workshopType={selectedWorkshop} userNumber={workshopUser?.userNumber}/>}
+        <WorkshopOpenForm
+          workshopType={selectedWorkshop}
+          userNumber={workshopUser?.userNumber}
+        />}
     </div>
   );
 }

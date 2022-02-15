@@ -16,7 +16,11 @@ export const config = {
     [workshopTypes.cv]: 'cvWorkshopUser',
     [workshopTypes.nlp]: 'nlpWorkshopUser',
   },
-  usersDBUrl: 'https://dl-wb-workshops-default-rtdb.europe-west1.firebasedatabase.app/users.json',
+  dbUrl: 'https://dl-wb-workshops-default-rtdb.europe-west1.firebasedatabase.app',
+  dbSchemaNames: {
+    [workshopTypes.cv]: 'cvUsers.json',
+    [workshopTypes.nlp]: 'nlpUsers.json',
+  },
   hosts: null,
 };
 

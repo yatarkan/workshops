@@ -30,15 +30,15 @@ const validateUserNumber = (value, hostsLength) => {
 }
 
 function WorkshopOpenForm({ workshopType, userNumber = '' }) {
-  const { hosts } = config;
+  const workshopHosts = config.hosts?.[workshopType];
 
-  const [userNumberError, setUserNumberError] = useState(validateUserNumber(userNumber, hosts?.length));
+  const [userNumberError, setUserNumberError] = useState(validateUserNumber(userNumber, workshopHosts?.length));
   const [currentUserNumber, setCurrentUserNumber] = useState(userNumber);
 
   const handleUserNumberInput = (event) => {
     const { value } = event.target;
     setCurrentUserNumber(value);
-    const error = validateUserNumber(value, hosts?.length);
+    const error = validateUserNumber(value, workshopHosts?.length);
     setUserNumberError(error);
   }
 
@@ -46,7 +46,7 @@ function WorkshopOpenForm({ workshopType, userNumber = '' }) {
     if (userNumberError) {
       return;
     }
-    const host = hosts[currentUserNumber - 1];
+    const host = workshopHosts[currentUserNumber - 1];
     const hostURL = getHostURL(host, workshopType);
     window.open(hostURL, '_blank');
   }
