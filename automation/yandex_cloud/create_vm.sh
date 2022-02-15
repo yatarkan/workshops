@@ -9,10 +9,10 @@ DISK_SNAPSHOT_NAME=dl-workbench-ssd
 SUBNET_NAME=default-ru-central1-a
 ZONE_NAME=ru-central1-a
 
-PUBLIC_KEY_PATH=
+PUBLIC_KEY_PATH=~/.ssh/opentalks.pub
 # --metadata-from-file user-data=metadata.yaml \
 
-VM_NUMBER=14
+VM_NUMBER=15
 
 for i in $(seq 1 ${VM_NUMBER}); do
   VM_NAME="${VM_NAME_PREFIX}-${i}"
