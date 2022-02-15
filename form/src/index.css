@@ -1,0 +1,36 @@
+.opentalks-ai-logo {
+  filter: invert(1);
+}
+
+#userNumberInput {
+  width: 300px;
+}
+
+button[aria-disabled='true'] {
+  pointer-events: none;
+}
+
+details-dialog {
+  position: fixed;
+  margin: 10vh auto;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  max-height: 80vh;
+  max-width: 90vw;
+  width: 900px;
+  overflow: auto;
+}
+
+.workshop-radio-group {
+  display: flex;
+}
+
+.workshop-radio-group > .radio-input {
+  margin-right: -29px;
+}
+
+.workshop-radio-group > .radio-label {
+  width: 50%;
+}
