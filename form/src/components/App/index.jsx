@@ -60,7 +60,6 @@ function App() {
           workshopUser={workshopUser}
           registerUser={handleRegisterUser}
           useCustomUserNumber={() => setIsCustomUserNumber(true)}
-          logoutUser={handleLogoutUser}
         />}
       {selectedWorkshop && (workshopUser || isCustomUserNumber) &&
         <WorkshopOpenForm
